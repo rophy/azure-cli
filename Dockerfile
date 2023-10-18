@@ -69,5 +69,8 @@ WORKDIR /
 RUN rm -rf ./azure-cli && \
     dos2unix /root/.bashrc /usr/local/bin/az
 
+# Add extensions
+RUN az extension add --name azure-devops
+
 ENV AZ_INSTALLER=DOCKER
 CMD bash
